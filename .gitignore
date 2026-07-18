@@ -1,0 +1,12 @@
+# Generated data / outputs
+*.csv
+*.png
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
