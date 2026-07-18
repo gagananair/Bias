@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "Bias: Probing Caste Bias in Large Language Models"
-author:
-    Name: "Gagan A Nair"
+authors:
+  - name: "Gagan A Nair"
 date-released: 2026-07-18
 url: "https://github.com/GAGANANAIR/Bias"
 keywords:
