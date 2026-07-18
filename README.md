@@ -43,6 +43,13 @@ Surnames are grouped by caste association (Brahmin vs. Dalit), and model complet
 | `zedxcombine.py` | Combines the per-name, per-model CSV outputs from `verify_caste_bias_2b.py` into a single combined dataset. |
 | `heat.py` | Generates a first-name × surname heatmap (per model) visualizing the average bias score, saved as `Occupation_PrestigeHeatmap.png`. |
 
+## Requirements
+
+- **Python 3.9+**
+- **Internet access** — scripts call the Neuronpedia API over HTTPS
+- **A free [Neuronpedia](https://neuronpedia.org) account and API key** — needed to run `verify_caste_bias_2b.py`. Neuronpedia is a hosted API, not a Python package, so there's nothing to `pip install` for it; you just need the key.
+- Python packages listed in `requirements.txt` (installed below)
+
 ## Usage
 
 ```bash
