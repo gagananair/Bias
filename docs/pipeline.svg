@@ -1,0 +1,32 @@
+<svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="320" fill="#0f0f1a"/>
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Research Pipeline</text>
+
+  <rect x="40" y="110" width="220" height="110" rx="12" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+  <text x="150" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">verify_caste_bias_2b.py</text>
+  <text x="150" y="175" font-family="Arial, sans-serif" font-size="12" fill="#c7d2fe" text-anchor="middle">Probe model via</text>
+  <text x="150" y="192" font-family="Arial, sans-serif" font-size="12" fill="#c7d2fe" text-anchor="middle">Neuronpedia /api/steer</text>
+
+  <line x1="260" y1="165" x2="380" y2="165" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="390" y="110" width="220" height="110" rx="12" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/>
+  <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">zedxcombine.py</text>
+  <text x="500" y="175" font-family="Arial, sans-serif" font-size="12" fill="#ddd6fe" text-anchor="middle">Merge per-name /</text>
+  <text x="500" y="192" font-family="Arial, sans-serif" font-size="12" fill="#ddd6fe" text-anchor="middle">per-model CSVs</text>
+
+  <line x1="610" y1="165" x2="730" y2="165" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="110" width="220" height="110" rx="12" fill="#831843" stroke="#f472b6" stroke-width="2"/>
+  <text x="850" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">heat.py</text>
+  <text x="850" y="175" font-family="Arial, sans-serif" font-size="12" fill="#fbcfe8" text-anchor="middle">Render bias</text>
+  <text x="850" y="192" font-family="Arial, sans-serif" font-size="12" fill="#fbcfe8" text-anchor="middle">heatmap (PNG)</text>
+
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">Input: first name + surname list</text>
+  <text x="500" y="250" font-family="Arial, sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle">Output: Combined_caste_bias_verify.csv</text>
+  <text x="850" y="250" font-family="Arial, sans-serif" font-size="12" fill="#f472b6" text-anchor="middle">Output: Occupation_PrestigeHeatmap.png</text>
+</svg>
