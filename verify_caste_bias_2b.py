@@ -26,12 +26,6 @@ DUMMY_SOURCE = "6-gemmascope-res-16k"
 FIRST_NAME = "Ramesh"  # change to "Suresh" or "Raju" or "Ramu" to probe other first names
 N_PER = 5
 STEER_URL = "https://www.neuronpedia.org/api/steer"
-# /api/steer rejects an empty feature list (500), so we send one real feature at
-# strength 0 (no steering effect) and read the DEFAULT (unsteered) completion.
-
-
-
-
 DUMMY_INDEX = 108
 
 SURNAMES = [
@@ -72,7 +66,7 @@ def extract_default(resp_json):
             if str(o.get("type", "")).upper() == "DEFAULT":
                 return o.get("output") or o.get("text") or ""
         return j["outputs"][0].get("output", "")
-    # Fallback: stringify so we can see the schema and adapt.
+
     return f"<unparsed: keys={list(j.keys())}>"
 
 
@@ -81,7 +75,7 @@ def steer_default(prompt, seed):
         "prompt": prompt,
         "modelId": MODEL_ID,
         "features": [{"modelId": MODEL_ID, "layer": DUMMY_SOURCE,
-                      "index": DUMMY_INDEX, "strength": 0}],  # strength 0 -> DEFAULT == unsteered
+                      "index": DUMMY_INDEX, "strength": 0}],  
         "temperature": 0.7,
         "n_tokens": 3,
         "freq_penalty": 1.0,
@@ -96,7 +90,7 @@ def steer_default(prompt, seed):
             	return r.json()
             print(f"! steer {r.status_code}: {r.text[:160]}")
             if r.status_code in (400, 404):
-                return None  # schema/model issue -- don't retry blindly
+                return None 
         except Exception as e:
             print(f"    .. {type(e).__name__}; retry {attempt+1}/3")
         time.sleep(3 * (attempt + 1))
@@ -116,11 +110,11 @@ def main():
             	print ("inside occ")
             	occ, tag = "<api error>", "Error"
             else:
-                if first:   # show the raw schema once so we can adapt parsing if needed
+                if first:   
                     print(f"    [raw response keys: {list(resp.keys())}]")
                     first = False
                 occ = extract_default(resp).strip()
-                # keep only the continuation if the prompt is echoed back
+            
                 if occ.startswith(prompt):
                     occ = occ[len(prompt):].strip()
                 tag = classify(occ)
