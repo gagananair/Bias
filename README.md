@@ -42,4 +42,4 @@ Connect
 
 LinkedIn
 Email
-Google Scholar (when available)
+
