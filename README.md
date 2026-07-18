@@ -1,9 +1,41 @@
-In this basically i have done some simple things to do the Caste-Biase in LLM
+Hi I'm Gagan Nair
 
-verif_caste_bias_2b.py - In that i have used three LLM model such as Llama,Gemma2-2b,Gemma2-9b-it.By there using neuronpedia i have downloaded required Files form there there i used neuronpedia api to acess the neuron pedia. If you guys needed you all can acess the Neuronpedia through this using your neede requirements.Output is getting as Csv
+BCA Data Science Student
+AI Research | Mechanistic Interpretability | Python
 
-zedxcombine.py- I used this too combine the getting CSV files for further analysis.
+Currently working on
 
-heat.py- In this here is a simple heatplot.
+• Mechanistic Interpretability
+• Sparse Autoencoders (SAEs)
+• Gemma & Llama Analysis
+• LLM Bias Research
+• Data Science
 
-These all are the thing i used for the analyses of my decent research 
+Skills
+
+Python
+Pandas
+PyTorch
+Transformers
+Machine Learning
+Git
+HTML
+CSS
+JavaScript
+
+Research
+
+Investigating caste bias in Large Language Models using
+Sparse Autoencoders and circuit tracing.
+
+Current Models
+
+Gemma 2B
+Gemma 9B
+Llama
+
+Connect
+
+LinkedIn
+Email
+Google Scholar (when available)
