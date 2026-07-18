@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Bias: Probing Caste Bias in Large Language Models"
+authors:
+  - family-names: "Nair"
+    given-names: "Gagan A"
+date-released: 2026-07-18
+url: "https://github.com/GAGANANAIR/Bias"
+keywords:
+  - mechanistic-interpretability
+  - sparse-autoencoders
+  - llm-bias
+  - caste-bias
+  - ai-safety
+license: MIT
+abstract: >
+  A research project investigating caste bias in Large Language Models
+  (Gemma 2B, Gemma 9B, Llama 3.1 8B) using Sparse Autoencoders and
+  circuit tracing via Neuronpedia. Probes model completions for
+  Indian first name + surname combinations to surface occupation-prestige
+  bias patterns linked to caste identity.
