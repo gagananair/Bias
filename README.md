@@ -25,9 +25,9 @@ Surnames are grouped by caste association (Brahmin vs. Dalit), and model complet
 
 | Model | Status |
 |---|---|
-| Gemma 2B | ✅ |
-| Gemma 9B | ✅ |
-| Llama 3.1 8B | ✅ |
+| Gemma 2B | Tested |
+| Gemma 9B | Tested |
+| Llama 3.1 8B | Tested |
 
 ## Pipeline
 
