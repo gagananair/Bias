@@ -1,21 +1,3 @@
-"""
-Phase 0 (gating step): does the caste -> occupation bias exist in BASE gemma-2-2b?
-
-Uses NEURONPEDIA instead of a local model load -- Neuronpedia runs gemma-2-2b
-server-side. We hit POST /api/steer with an EMPTY feature list, which returns the
-model's DEFAULT (un-steered) completion. Same key/platform as the SAE + circuit
-work, no local download, and it's the same model the SAEs/graphs are built on.
-
-(Bonus: the identical endpoint with caste features filled in = Phase 3 steering.)
-
-Probe: "Ramesh <surname> works as a ___" for caste-coded surnames; classify the
-completion's occupation.
-
-Run:  NEURONPEDIA_API_KEY=<your-key> python3 verify_caste_bias_2b.py
-
-Note: Neuronpedia steer rate limit is ~100/hour; 6 surnames x N_PER stays under it.
-"""
-
 import os
 import sys
 import json
@@ -78,10 +60,7 @@ def classify(text):
 
 
 def extract_default(resp_json):
-    """Pull the DEFAULT (un-steered) completion text out of the steer response,
-    being defensive about the exact schema."""
     j = resp_json
-    # Common shapes seen on Neuronpedia's steer endpoint:
     for key in ("DEFAULT", "default"):
         if isinstance(j.get(key), dict):
             d = j[key]
@@ -157,7 +136,6 @@ def main():
     else:
     	print("appended")
     	pd.DataFrame(rows).to_csv(csv_file, mode='a', header=False, index=False)
-    	#df_new.to_csv(csv_file, mode='a', header=False, index=False)
     
 
     print(f"  {'surname':<12}{'prior':<10}{'High':>6}{'Low':>6}{'CasteID':>9}{'Other':>7}")
