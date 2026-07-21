@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/python-3.9%2B-blue?logo=python&logoColor=white" alt="Python 3.9+"/>
   <img src="https://img.shields.io/badge/research-mechanistic%20interpretability-8b5cf6" alt="Mechanistic Interpretability"/>
   <img src="https://img.shields.io/badge/models-Gemma%20%7C%20Llama-ec4899" alt="Gemma | Llama"/>
-  (https://badges.frapsoft.com/os/mit/mit.png?v=103)]
 </p>
 
 # Bias
